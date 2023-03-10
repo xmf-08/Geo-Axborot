@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/my_tab_layout"
+        app:tabMode="fixed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_background"
+        app:tabIndicatorHeight="0dp"
+        app:tabGravity="center"
+        android:saveEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/my_view_pager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnlar"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/my_view_pager"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/my_tab_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/btnlar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_tab_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_royhat"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#068AF3"
+            android:layout_height="wrap_content"
+            android:text="Ro'yhatdan O'tish"/>
+        <Button
+            android:id="@+id/btn_otkaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#75B8ED"
+            android:text="Ro'yhatdan O'tish"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
